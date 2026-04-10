@@ -1,6 +1,6 @@
 # Análisis de Salud Global con Apache Spark — Tarea 3
 
-Script de procesamiento batch desarrollado con **PySpark** que analiza un dataset de salud global (`Health.csv`) almacenado en HDFS. El pipeline cubre limpieza de datos, análisis exploratorio, uso de RDDs y tres consultas analíticas sobre enfermedades, países y evolución temporal.
+Este Script de procesamiento batch desarrollado con **PySpark** analiza un dataset de salud global (`Health.csv`) almacenado en HDFS. El pipeline cubre limpieza de datos, análisis exploratorio, uso de RDDs y tres consultas analíticas sobre enfermedades, países y evolución temporal.
 
 ---
 
@@ -27,7 +27,7 @@ El script implementa un pipeline completo de procesamiento de datos en las sigui
 
 ## Estructura esperada del dataset
 
-El archivo `Health.csv` debe contener al menos las siguientes columnas:
+El archivo `Health.csv` contiene las siguientes columnas:
 
 | Columna | Tipo |
 |---------|------|
@@ -68,7 +68,7 @@ hdfs dfsadmin -report
 ### 2. Subir el dataset a HDFS
 
 ```bash
-# Crear el directorio en HDFS (si no existe)
+# Crear el directorio en HDFS
 hdfs dfs -mkdir -p /Tarea3
 
 # Copiar el archivo CSV desde el sistema local
@@ -85,22 +85,6 @@ spark-submit \
   --master local[*] \
   analisis_salud.py
 ```
-
-> **Nota:** Reemplaza `local[*]` por la URL de tu cluster si ejecutas en modo distribuido (p. ej. `yarn` o `spark://master:7077`).
-
-### 4. Ejecución en clúster con YARN (opcional)
-
-```bash
-spark-submit \
-  --master yarn \
-  --deploy-mode client \
-  --num-executors 2 \
-  --executor-memory 2g \
-  --executor-cores 2 \
-  analisis_salud.py
-```
-
----
 
 ## Salida esperada
 
