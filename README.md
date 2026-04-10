@@ -40,17 +40,6 @@ El archivo `Health.csv` contiene las siguientes columnas:
 | `Mortality Rate (%)` | Float |
 | `Recovery Rate (%)` | Float |
 
----
-
-## Requisitos
-
-- **Apache Hadoop** ≥ 3.x (HDFS activo en `hdfs://localhost:9000`)
-- **Apache Spark** ≥ 3.x
-- **Python** ≥ 3.8
-- **PySpark** instalado y configurado (`SPARK_HOME` en el PATH)
-- El archivo `Health.csv` subido a HDFS en la ruta `/Tarea3/Health.csv`
-
----
 
 ## Instrucciones de Ejecución
 
