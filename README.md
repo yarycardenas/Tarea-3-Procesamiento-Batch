@@ -43,37 +43,11 @@ El archivo `Health.csv` contiene las siguientes columnas:
 
 ## Instrucciones de Ejecución
 
-### 1. Verificar que HDFS esté activo
+### 1. Iniciar Spark
+### 2. Iniciar el proceso de trabajo de Spark
+### 3. Realizar el cargue  del dataset en Hadoop
+### 4. Ejecutar Batch
 
-```bash
-# Iniciar los servicios de Hadoop si no están corriendo
-start-dfs.sh
-start-yarn.sh
-
-# Comprobar que el namenode está disponible
-hdfs dfsadmin -report
-```
-
-### 2. Subir el dataset a HDFS
-
-```bash
-# Crear el directorio en HDFS
-hdfs dfs -mkdir -p /Tarea3
-
-# Copiar el archivo CSV desde el sistema local
-hdfs dfs -put /ruta/local/Health.csv /Tarea3/Health.csv
-
-# Verificar que el archivo fue subido correctamente
-hdfs dfs -ls /Tarea3/
-```
-
-### 3. Ejecutar el script con spark-submit
-
-```bash
-spark-submit \
-  --master local[*] \
-  analisis_salud.py
-```
 
 ## Salida esperada
 
