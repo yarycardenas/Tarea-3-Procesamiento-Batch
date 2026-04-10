@@ -1,10 +1,10 @@
-# 🏥 Análisis de Salud Global con Apache Spark — Tarea 3
+# Análisis de Salud Global con Apache Spark — Tarea 3
 
 Script de procesamiento batch desarrollado con **PySpark** que analiza un dataset de salud global (`Health.csv`) almacenado en HDFS. El pipeline cubre limpieza de datos, análisis exploratorio, uso de RDDs y tres consultas analíticas sobre enfermedades, países y evolución temporal.
 
 ---
 
-## 📋 Descripción de la Solución
+## Descripción de la Solución
 
 El script implementa un pipeline completo de procesamiento de datos en las siguientes etapas:
 
@@ -25,7 +25,7 @@ El script implementa un pipeline completo de procesamiento de datos en las sigui
 
 ---
 
-## 🗂️ Estructura esperada del dataset
+## Estructura esperada del dataset
 
 El archivo `Health.csv` debe contener al menos las siguientes columnas:
 
@@ -42,7 +42,7 @@ El archivo `Health.csv` debe contener al menos las siguientes columnas:
 
 ---
 
-## ⚙️ Requisitos
+## Requisitos
 
 - **Apache Hadoop** ≥ 3.x (HDFS activo en `hdfs://localhost:9000`)
 - **Apache Spark** ≥ 3.x
@@ -52,7 +52,7 @@ El archivo `Health.csv` debe contener al menos las siguientes columnas:
 
 ---
 
-## 🚀 Instrucciones de Ejecución
+## Instrucciones de Ejecución
 
 ### 1. Verificar que HDFS esté activo
 
@@ -102,7 +102,7 @@ spark-submit \
 
 ---
 
-## 📤 Salida esperada
+## Salida esperada
 
 Al ejecutarse correctamente, el script imprime en consola:
 
